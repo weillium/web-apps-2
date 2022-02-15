@@ -1,0 +1,24 @@
+<h1>New Contact</h1>
+<%= form_with model: @contact do |form| %>
+    <ul>
+        <li>
+            <%= form.label "first name" %>
+            <%= form.text_field "first_name" %>
+        </li>
+        <li>
+            <%= form.label "last name" %>
+            <%= form.text_field "last_name" %>
+        </li>
+        <li>
+            <%= form.label "email" %>
+            <%= form.text_field "email" %>
+        </li>
+        <li>
+            <%= form.label "phone number" %>
+            <%= form.text_field "phone_number" %>
+        </li>
+    </ul>
+    <%= form.hidden_field "company_id" %>
+    <%= form.submit %>
+<% end %>
+
